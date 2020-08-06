@@ -24,3 +24,15 @@ User.create(
   password: 'password',
   profile_url: 'github.com/ennalezah'
 )
+
+Project.create(
+  title: 'To-do App',
+  description: 'Looking to create a simple to-do list app where user can add and delete items.',
+  difficulty: 'Beginner'
+)
+
+Project.create(
+  title: 'Time Me',
+  description: 'Need help with my timer project. User should be able to add a time, start, stop, and restart timer.',
+  difficulty: 'Beginner'
+)
