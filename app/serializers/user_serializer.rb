@@ -7,5 +7,7 @@ class UserSerializer
     options = {
       except: [:password, :created_at, :updated_at]
     }
+
+    @user.to_json(options)
   end
 end
