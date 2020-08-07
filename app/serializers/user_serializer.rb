@@ -5,7 +5,7 @@ class UserSerializer
 
   def to_serialized_json
     options = {
-      except: [:password, :created_at, :updated_at]
+      except: [:password_digest, :created_at, :updated_at]
     }
 
     @user.to_json(options)
