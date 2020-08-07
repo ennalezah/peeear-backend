@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_07_060341) do
+ActiveRecord::Schema.define(version: 2020_08_07_095004) do
 
   create_table "comments", force: :cascade do |t|
     t.text "input"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2020_08_07_060341) do
     t.string "first_name"
     t.string "last_name"
     t.string "email"
-    t.string "password"
+    t.string "password_digest"
     t.string "profile_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
