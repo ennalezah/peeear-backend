@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users, only: [:index, :show]
       resources :projects, only: [:index, :show]
+      resources :comments, only: [:index, :create]
     end
   end
 end
