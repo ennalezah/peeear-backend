@@ -28,8 +28,8 @@ User.create(
 # hazel = User.find_by(first_name: 'Hazel')
 
 # hazel.projects.create(
-#   title: 'To-do App',
-#   description: 'Looking to create a simple to-do list app where user can add and delete items.',
+#   title: 'What To-do?!',
+#   description: 'A simple to-do list app where users can add and delete items.',
 #   difficulty: 'Beginner'
 # )
 
