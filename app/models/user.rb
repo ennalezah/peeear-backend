@@ -5,6 +5,4 @@ class User < ApplicationRecord
 
   has_many :comments
   has_many :projects, through: :comments
-
-  # has_many :owned_projects, foreignclass: "Project"
 end

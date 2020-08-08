@@ -34,7 +34,7 @@ User.create(
 # )
 
 # Project.create(
-#   title: 'Time Me',
-#   description: 'Need help with my timer project. User should be able to add a time, start, stop, and restart timer.',
+#   title: 'TiMe',
+#   description: 'User should be able to start, pause, stop, and restart timer.',
 #   difficulty: 'Beginner'
 # )
