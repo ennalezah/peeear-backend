@@ -5,6 +5,11 @@ class ProjectSerializer
 
   def to_serialized_json
     options = {
+      include: { 
+        comments: {
+          only: [:input, :user_id]
+        } 
+      },
       except: [:created_at, :updated_at]
     }
 
