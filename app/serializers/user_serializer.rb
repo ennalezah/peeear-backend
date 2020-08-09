@@ -6,7 +6,7 @@ class UserSerializer
   def to_serialized_json
     options = {
       include: { 
-        projects: {
+        owned_projects: {
           only: [:title, :description, :difficulty]
         } 
       },

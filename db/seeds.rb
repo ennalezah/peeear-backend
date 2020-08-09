@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-require 'database_cleaner'
-DatabaseCleaner.clean_with(:truncation)
+# require 'database_cleaner'
+# DatabaseCleaner.clean_with(:truncation)
 
 User.create(
   first_name: 'Daphne',
@@ -25,16 +25,18 @@ User.create(
   profile_url: 'github.com/ennalezah'
 )
 
-# hazel = User.find_by(first_name: 'Hazel')
+hazel = User.find_by(first_name: 'Hazel')
 
-# hazel.projects.create(
-#   title: 'What To-do?!',
-#   description: 'A simple to-do list app where users can add and delete items.',
-#   difficulty: 'Beginner'
-# )
+hazel.owned_projects.create(
+  title: 'What To-do?!',
+  description: 'A simple to-do list app where users can add and delete items.',
+  difficulty: 'Beginner'
+)
 
-# Project.create(
-#   title: 'TiMe',
-#   description: 'User should be able to start, pause, stop, and restart timer.',
-#   difficulty: 'Beginner'
-# )
+daphne = User.find_by(first_name: 'Daphne')
+
+daphne.owned_projects.create(
+  title: 'Right on Time',
+  description: 'Users should be able to start, pause, stop, and restart timer.',
+  difficulty: 'Intermediate'
+)
