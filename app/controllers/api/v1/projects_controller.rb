@@ -18,7 +18,7 @@ class Api::V1::ProjectsController < ApplicationController
   def create
     project = Project.new(project_params)
 
-    if project.save?
+    if project.save
       render json: ProjectSerializer.new(project).to_serialized_json, status: :accepted
     else
       render json: { error: "There was a problem creating project." }
