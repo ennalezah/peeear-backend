@@ -14,4 +14,20 @@ class Api::V1::ProjectsController < ApplicationController
       render json: "Project not found. Check project ID and try again.", status: :not_found
     end
   end
+
+  def create
+    project = Project.new(project_params)
+
+    if project.save?
+      render json: ProjectSerializer.new(project).to_serialized_json, status: :accepted
+    else
+      render json: { error: "There was a problem creating project." }
+    end
+  end
+
+  private
+
+  def project_params
+    params.require(:project).permit(:title, :description, :difficulty, :owner_id)
+  end
 end
