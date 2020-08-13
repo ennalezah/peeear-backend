@@ -21,7 +21,7 @@ class Api::V1::ProjectsController < ApplicationController
     if project.save
       render json: ProjectSerializer.new(project).to_serialized_json, status: :accepted
     else
-      render json: { error: "There was a problem creating project." }
+      render json: { error: "There was a problem creating the project." }
     end
   end
 
