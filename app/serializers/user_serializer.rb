@@ -10,7 +10,7 @@ class UserSerializer
           only: [:title, :description, :difficulty]
         } 
       },
-      except: [:email, :password_digest, :created_at, :updated_at]
+      except: [:created_at, :updated_at]
     }
 
     @user.to_json(options)
