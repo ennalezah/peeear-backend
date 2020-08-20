@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_20_113850) do
+ActiveRecord::Schema.define(version: 2020_08_20_115933) do
 
   create_table "comments", force: :cascade do |t|
     t.text "input"
@@ -26,10 +26,11 @@ ActiveRecord::Schema.define(version: 2020_08_20_113850) do
     t.string "title"
     t.text "description"
     t.string "difficulty"
-    t.integer "owner_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["owner_id"], name: "index_projects_on_owner_id"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
   end
 
   create_table "users", force: :cascade do |t|
