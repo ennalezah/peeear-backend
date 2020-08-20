@@ -5,11 +5,11 @@ class UserSerializer
 
   def to_serialized_json
     options = {
-      include: { 
-        owned_projects: {
-          only: [:title, :description, :difficulty]
-        } 
-      },
+      # include: { 
+      #   owned_projects: {
+      #     only: [:title, :description, :difficulty]
+      #   } 
+      # },
       except: [:created_at, :updated_at]
     }
 
