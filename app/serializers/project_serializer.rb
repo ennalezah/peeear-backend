@@ -10,7 +10,7 @@ class ProjectSerializer
       #     only: [:input, :user_id]
       #   } 
       # },
-      except: [:created_at, :updated_at]
+      except: [:updated_at]
     }
 
     @project.to_json(options)
